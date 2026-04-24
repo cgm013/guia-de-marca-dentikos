@@ -1,0 +1,111 @@
+# Briefing para desarrollo de un proyecto
+
+## Dónde usar el material gráfico
+
+- ¿Dónde necesitaréis mostrar el logo o la identidad corporativa?  
+  *(Ejemplo: redes sociales, tarjetas de visita, uniformes, vehículos, etc.)*
+
+---
+
+## Menú de contenido WEB
+
+- Esta sección será la cabecera de la web y en ella deben reflejarse las diferentes secciones y páginas que componen una web.  
+  **Ejemplo:**  
+  - Inicio *(Escaparate inicial de la web)*  
+  - Quiénes somos  
+  - Servicios  
+  - Contacto  
+  - *(Si fuera una tienda online, puedes incluir las categorías de producto y una pequeña descripción de la misma.)*
+
+Debe tener una sección "sobre nosotros" (manifiesto de valores, objetivos, equipo)
+Servicios ofrecidos (dividirlo en Odontología del día a día, servicios cosméticos, servicios quirúrgicos... ahí poner: limpiezas dentales, empastes, endodoncias, coronas, puentes, tratamientos preventivos, implantes, ortodoncia, periodoncia, rehabilitaciones orales, carillas, blanqueamientos dentales)...
+Por tipo de persona. (para los peques, familias, tratamientos avanzados, cuida tu salud dental)
+
+El CTA Principal será pedir cita
+---
+
+## Tu negocio
+
+- En términos generales, ¿a qué se dedica tu empresa? (mínimo 3 párrafos) 
+- ¿Cuáles son sus valores, su historia, su marca distintiva?  
+- Si tuvieses que describir la personalidad de vuestra empresa en tres palabras *(adjetivos)*, ¿cuáles serían?  
+- ¿Qué hará que vuestra empresa destaque frente a otros competidores que ofrecen servicios similares?  
+
+
+
+Ofrecemos un trato cercano y ameno. Hacemos que toda la familia se sienta bien acompañada, utilizando un servicio 100% profesional sin dejar de lado el buen trato y cercanía.
+
+Hacemos que los pequeños de la casa se sientan a gusto. Te damos confianza que superes tus temores, dudas y reticencias en cuanto a tu salud dental acompañándote en tu proceso desde el primer momento y forjando un vínculo más allá de profesional-paciente.
+
+Utilizamos un lenguaje cercano y aterrizamos en soluciones tus problemas bucodentales del día a día.
+
+Que la gente deje de tener miedo y se sienta algo más relajada cuando se siente en el sillón, entren en confianza con el equipo y pierdan ese miedo. Mucho protagonismo del paciente y del equipo humano.
+
+"Queremos reinventar la experiencia de ir al dentista. esto debe transmitirse en positivo para tí y tu familia"
+"Sabemos que puedes tener mucho miedo de asistir al dentista, ya sea por experiencia propia o por escucharlo desde pequeño. Queremos hacerte sentir bien y seguro"
+
+---
+
+## Carta de servicios y amplitud del mercado
+
+- ¿Puedes hablarnos con algo más de profundidad sobre los servicios y/o productos que ofreces?
+- ¿Dónde se pueden obtener tus productos o servicios? *(mercado local, regional, nacional o internacional)*
+
+---
+
+## Cliente ideal
+
+- ¿Quién es el cliente ideal de tus servicios/productos? ¿Qué tipo de cliente está interesado en ellos? *(Si hay más de uno, indícanos el cliente ideal de cada uno.)* 
+- ¿Es tu negocio B2B? ¿B2C? ¿Ambas?
+- ¿Qué tipo de percepción queréis que tengan vuestros clientes sobre la empresa?  
+  *(Ejemplo: cercana, profesional, lujosa, accesible, etc.)*
+
+Padres preocupados por la situación y salud de sus hijos. Solventes económicamente.
+
+Personas que se sienten inicialmente con un miedo a entrar en una clínica dental pero que a la vez tienen un problema de salud que conocen.
+---
+
+## Conversión
+
+- ¿Cómo se sostiene el negocio y cuales son sus fuentes de ingresos? ¿De qué maneras monetiza?
+  *(Transacción directa, cotizaciones personalizadas, modelo de suscripción, afiliaciones y comisiones, donaciones, etc.)*
+
+Servicios dentales ofrecidos presencialmente.
+---
+
+## Objetivos del proyecto
+
+- ¿Cuál es el objetivo principal de este proyecto?  
+  *(Ejemplo: aumentar visibilidad, aumentar ventas, captar nuevos clientes, mejorar imagen empresarial, etc.)*
+
+Aumentar visibilidad y dejar claros los servicios
+---
+
+## Identidad visual
+
+- ¿Hay algún color o combinación de colores o tipografías que use vuestra marca? ¿Os gustaría que creáramos una para vosotros?  
+- ¿Hay alguna otra empresa cuya identidad visual os llame la atención y os guste? *(No necesariamente de vuestro sector.)*  
+- ¿Qué tipo de diseño **NO** va con la personalidad de vuestra empresa?
+
+mucho protagonismo en imágenes y videos
+
+calidez. tonos tierra.
+
+#a39662
+#a19460
+#d6b896
+#a07749
+
+https://jacksonfamilydentalonline.com/
+---
+
+## Otra información relevante
+
+- Puedes mandar o escribir aquí tanta información como nos sea útil y que podamos tener en cuenta a la hora de desarrollar tu web.  
+
+
+---
+
+## Palabras clave SEO
+
+- Dinos las palabras o frases que piensas que tu cliente ideal usaría para buscar tus servicios en Google o en Redes Sociales, relacionadas con tu actividad. *(Mínimo 15 palabras o frases cortas.)*

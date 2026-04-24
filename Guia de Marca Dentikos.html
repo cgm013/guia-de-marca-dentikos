@@ -1,0 +1,1426 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Dentikos — Guía de Marca</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=Nunito:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    /* Core brand */
+    --sage-50:   #f2f4ec;
+    --sage-100:  #e5ead7;
+    --sage-200:  #cdd6b3;
+    --sage-300:  #b4c28e;
+    --sage-400:  #a3b47c;   /* Salvia del logo */
+    --sage-500:  #8a9d64;
+    --sage-600:  #6b7c4a;
+    --sage-700:  #4f5c35;
+
+    --coral-50:  #fdecea;
+    --coral-100: #fad5cf;
+    --coral-200: #f4b2a6;
+    --coral-300: #ee8f7d;
+    --coral-400: #e9735f;   /* Coral del logo */
+    --coral-500: #d75c47;
+    --coral-600: #b84732;
+    --coral-700: #8f3524;
+
+    /* Earth tones del briefing */
+    --earth-sand:    #d6b896;
+    --earth-khaki:   #a39662;
+    --earth-olive:   #a19460;
+    --earth-toffee:  #a07749;
+
+    /* Neutros cálidos */
+    --cream:      #faf6ef;
+    --bone:       #f3ece0;
+    --paper:      #ebe3d3;
+    --stone-300:  #d4cbb9;
+    --stone-500:  #8a8270;
+    --stone-700:  #4a4538;
+    --ink:        #2a2620;
+
+    --max: 1240px;
+    --gutter: clamp(20px, 4vw, 64px);
+  }
+
+  * { box-sizing: border-box; }
+  .app-card[style*="span 2"] { min-width: 0; }
+  html, body { margin: 0; padding: 0; overflow-x: hidden; }
+  body {
+    background: var(--cream);
+    color: var(--ink);
+    font-family: 'Nunito', system-ui, sans-serif;
+    font-size: 17px;
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+  img { display: block; max-width: 100%; }
+
+  /* ---------- Type scale ---------- */
+  .display {
+    font-family: 'Fraunces', Georgia, serif;
+    font-weight: 400;
+    font-variation-settings: "opsz" 144, "SOFT" 50;
+    letter-spacing: -0.015em;
+    line-height: 0.95;
+  }
+  .serif { font-family: 'Fraunces', Georgia, serif; }
+  .mono  { font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 12px; letter-spacing: 0.02em; }
+  .eyebrow {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--stone-500);
+  }
+
+  h1, h2, h3, h4 { margin: 0; font-weight: 500; }
+  p { margin: 0 0 1em; text-wrap: pretty; }
+  p:last-child { margin-bottom: 0; }
+
+  /* ---------- Layout primitives ---------- */
+  .section {
+    padding: clamp(80px, 10vw, 140px) var(--gutter);
+    border-top: 1px solid var(--stone-300);
+  }
+  .section:first-of-type { border-top: 0; }
+  .wrap { max-width: var(--max); margin: 0 auto; }
+  .grid { display: grid; gap: 32px; }
+  .g-2 { grid-template-columns: repeat(2, 1fr); }
+  .g-3 { grid-template-columns: repeat(3, 1fr); }
+  .g-4 { grid-template-columns: repeat(4, 1fr); }
+  @media (max-width: 960px) {
+    .g-2, .g-3, .g-4 { grid-template-columns: 1fr; }
+    .g-3 > [style*="span 2"], .g-4 > [style*="span 2"] { grid-column: auto !important; }
+  }
+
+  .section-head {
+    display: grid;
+    grid-template-columns: 180px 1fr;
+    gap: 40px;
+    align-items: baseline;
+    padding-bottom: 48px;
+    margin-bottom: 48px;
+    border-bottom: 1px solid var(--stone-300);
+  }
+  @media (max-width: 720px) { .section-head { grid-template-columns: 1fr; gap: 12px; } }
+  .section-head .num {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-weight: 300;
+    font-size: 44px;
+    color: var(--sage-600);
+  }
+  .section-head h2 {
+    font-family: 'Fraunces', serif;
+    font-weight: 400;
+    font-size: clamp(38px, 5vw, 62px);
+    line-height: 1;
+    letter-spacing: -0.02em;
+    color: var(--ink);
+  }
+  .section-head .lead {
+    margin-top: 18px;
+    max-width: 62ch;
+    color: var(--stone-700);
+    font-size: 18px;
+  }
+
+  /* ---------- Hero / cover ---------- */
+  .cover {
+    background: var(--sage-400);
+    color: var(--cream);
+    padding: clamp(60px, 8vw, 100px) var(--gutter) clamp(60px, 8vw, 100px);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    overflow: hidden;
+  }
+  .cover::before {
+    /* coral disc — nods to the “o” in the logo */
+    content: "";
+    position: absolute;
+    right: -180px; top: 38%;
+    width: 520px; height: 520px;
+    background: var(--coral-400);
+    border-radius: 50%;
+    pointer-events: none;
+  }
+  .cover::after {
+    /* cream smile inside the coral disc */
+    content: "";
+    position: absolute;
+    right: -60px; top: calc(38% + 230px);
+    width: 260px; height: 130px;
+    background: var(--cream);
+    border-radius: 0 0 260px 260px;
+    pointer-events: none;
+  }
+  .cover .bar {
+    display: flex; justify-content: space-between; align-items: center;
+    font-family: 'JetBrains Mono', monospace; font-size: 11px;
+    letter-spacing: 0.22em; text-transform: uppercase;
+    color: var(--sage-100);
+    position: relative; z-index: 2;
+  }
+  .cover h1 {
+    font-family: 'Fraunces', serif;
+    font-weight: 400;
+    font-size: clamp(68px, 12vw, 180px);
+    line-height: 0.92;
+    letter-spacing: -0.03em;
+    color: var(--cream);
+    position: relative; z-index: 2;
+    max-width: 11ch;
+  }
+  .cover h1 em {
+    font-style: italic;
+    color: var(--coral-200);
+    font-weight: 300;
+  }
+  .cover .meta {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 32px;
+    border-top: 1px solid rgba(255,255,255,0.25);
+    padding-top: 28px;
+    position: relative; z-index: 2;
+  }
+  @media (max-width: 720px) { .cover .meta { grid-template-columns: repeat(2, 1fr); } }
+  .cover .meta dt {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px; letter-spacing: 0.22em; text-transform: uppercase;
+    color: var(--sage-100); margin-bottom: 6px;
+  }
+  .cover .meta dd {
+    margin: 0;
+    font-family: 'Fraunces', serif;
+    font-size: 18px;
+    color: var(--cream);
+  }
+
+  /* ---------- TOC ---------- */
+  .toc { background: var(--bone); }
+  .toc ol {
+    list-style: none; padding: 0; margin: 0;
+    border-top: 1px solid var(--stone-300);
+  }
+  .toc li {
+    display: grid;
+    grid-template-columns: 80px 1fr auto;
+    gap: 32px;
+    padding: 28px 0;
+    border-bottom: 1px solid var(--stone-300);
+    align-items: baseline;
+  }
+  .toc .idx {
+    font-family: 'JetBrains Mono', monospace; font-size: 13px;
+    color: var(--stone-500);
+  }
+  .toc .name {
+    font-family: 'Fraunces', serif;
+    font-size: clamp(22px, 3vw, 34px);
+    font-weight: 400;
+    color: var(--ink);
+    letter-spacing: -0.01em;
+  }
+  .toc .desc {
+    color: var(--stone-700); font-size: 14px; max-width: 40ch; text-align: right;
+  }
+  @media (max-width: 720px) {
+    .toc li { grid-template-columns: 48px 1fr; }
+    .toc .desc { display: none; }
+  }
+
+  /* ---------- Manifesto ---------- */
+  .manifesto {
+    background: var(--cream);
+  }
+  .manifesto .quote {
+    font-family: 'Fraunces', serif;
+    font-weight: 300;
+    font-size: clamp(32px, 5vw, 58px);
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    color: var(--ink);
+    max-width: 22ch;
+  }
+  .manifesto .quote em { font-style: italic; color: var(--coral-500); font-weight: 300; }
+  .manifesto .quote .sage { color: var(--sage-600); font-style: italic; }
+
+  .values {
+    margin-top: 80px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0;
+    border-top: 1px solid var(--stone-300);
+    border-bottom: 1px solid var(--stone-300);
+  }
+  @media (max-width: 820px) { .values { grid-template-columns: 1fr; } }
+  .values > div {
+    padding: 36px 28px;
+    border-right: 1px solid var(--stone-300);
+  }
+  @media (max-width: 820px) {
+    .values > div { border-right: 0; border-bottom: 1px solid var(--stone-300); }
+    .values > div:last-child { border-bottom: 0; }
+  }
+  .values > div:last-child { border-right: 0; }
+  .values h4 {
+    font-family: 'Fraunces', serif;
+    font-size: 28px; font-weight: 400;
+    margin-bottom: 10px;
+    color: var(--sage-700);
+  }
+  .values h4 .n {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px; color: var(--stone-500); margin-right: 8px;
+    vertical-align: 6px;
+  }
+  .values p { color: var(--stone-700); font-size: 15px; }
+
+  /* ---------- Logo section ---------- */
+  .logo-section { background: var(--bone); }
+  .logo-stage {
+    background: var(--cream);
+    border: 1px solid var(--stone-300);
+    padding: 56px;
+    display: flex; align-items: center; justify-content: center;
+    min-height: 320px;
+    position: relative;
+  }
+  .logo-stage.dark { background: var(--sage-700); }
+  .logo-stage.sage { background: var(--sage-400); }
+  .logo-stage.coral { background: var(--coral-400); }
+  .logo-stage.paper { background: var(--paper); }
+  .logo-stage img { max-height: 180px; width: auto; object-fit: contain; }
+  .logo-stage .tag {
+    position: absolute; top: 14px; left: 16px;
+    font-family: 'JetBrains Mono', monospace; font-size: 10px;
+    letter-spacing: 0.2em; text-transform: uppercase;
+    color: var(--stone-500);
+  }
+  .logo-stage.dark .tag, .logo-stage.sage .tag, .logo-stage.coral .tag { color: rgba(255,255,255,0.7); }
+
+  .logo-big {
+    grid-column: 1 / -1;
+    min-height: 420px;
+  }
+  .logo-big img { max-height: 260px; }
+
+  .anatomy {
+    background: var(--cream);
+    border: 1px solid var(--stone-300);
+    padding: 56px;
+    position: relative;
+  }
+  .anatomy img { max-width: 520px; margin: 0 auto; }
+  .anatomy .callout {
+    position: absolute;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--stone-700);
+  }
+  .anatomy .callout::before {
+    content: ""; display: block; width: 10px; height: 10px;
+    border: 1px solid var(--coral-500); border-radius: 50%;
+    margin-bottom: 6px;
+  }
+
+  .clearspace {
+    background: var(--cream);
+    border: 1px solid var(--stone-300);
+    padding: 56px;
+    display: flex; justify-content: center; align-items: center;
+  }
+  .clearspace .frame {
+    position: relative;
+    padding: 48px;
+    border: 1px dashed var(--sage-500);
+  }
+  .clearspace .frame::before {
+    content: "X";
+    position: absolute; top: -12px; left: -12px;
+    width: 24px; height: 24px;
+    background: var(--sage-400); color: var(--cream);
+    display: grid; place-items: center;
+    font-family: 'Fraunces', serif; font-size: 14px;
+    border-radius: 50%;
+  }
+  .clearspace img { max-height: 140px; }
+
+  .dos {
+    background: var(--cream);
+    border: 1px solid var(--stone-300);
+    padding: 36px;
+    min-height: 260px;
+    display: flex; flex-direction: column; justify-content: space-between;
+    position: relative;
+  }
+  .dos .example {
+    flex: 1;
+    display: grid; place-items: center;
+    margin-bottom: 20px;
+    padding: 16px;
+  }
+  .dos .example img { max-height: 100px; max-width: 100%; object-fit: contain; }
+  .dos .label {
+    display: flex; gap: 10px; align-items: center;
+    padding-top: 16px; border-top: 1px solid var(--stone-300);
+    font-size: 13px; color: var(--stone-700);
+  }
+  .dos .badge {
+    width: 22px; height: 22px; border-radius: 50%;
+    display: grid; place-items: center;
+    font-size: 13px; font-weight: 700;
+    flex-shrink: 0;
+  }
+  .dos.yes .badge { background: var(--sage-400); color: var(--cream); }
+  .dos.no  .badge { background: var(--coral-500); color: var(--cream); }
+
+  /* ---------- Colors ---------- */
+  .colors { background: var(--cream); }
+  .swatch {
+    aspect-ratio: 3 / 4;
+    padding: 24px;
+    display: flex; flex-direction: column; justify-content: space-between;
+    color: var(--ink);
+    border-radius: 2px;
+  }
+  .swatch.dark { color: var(--cream); }
+  .swatch .name { font-family: 'Fraunces', serif; font-size: 24px; font-weight: 400; letter-spacing: -0.01em; }
+  .swatch .codes { font-family: 'JetBrains Mono', monospace; font-size: 11px; line-height: 1.7; opacity: 0.9; }
+  .swatch .codes div { display: flex; justify-content: space-between; gap: 12px; }
+
+  .palette-row {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 40px;
+    align-items: start;
+    padding: 40px 0;
+    border-top: 1px solid var(--stone-300);
+  }
+  .palette-row:last-child { border-bottom: 1px solid var(--stone-300); }
+  @media (max-width: 900px) { .palette-row { grid-template-columns: 1fr; } }
+  .palette-row h3 {
+    font-family: 'Fraunces', serif;
+    font-size: 28px; font-weight: 400;
+    color: var(--ink); margin-bottom: 10px;
+  }
+  .palette-row p { color: var(--stone-700); font-size: 14px; }
+  .palette-row .role {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase;
+    color: var(--coral-500); margin-bottom: 14px;
+  }
+  .scale {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 4px;
+  }
+  @media (max-width: 720px) { .scale { grid-template-columns: repeat(3, 1fr); } }
+
+  .ratios {
+    margin-top: 48px;
+    border: 1px solid var(--stone-300);
+    background: var(--bone);
+    padding: 40px;
+  }
+  .ratios h3 {
+    font-family: 'Fraunces', serif; font-size: 24px; font-weight: 400;
+    margin-bottom: 18px;
+  }
+  .ratio-bar {
+    display: flex; height: 60px; overflow: hidden;
+    border-radius: 2px;
+  }
+  .ratio-bar > div {
+    display: grid; place-items: center;
+    font-family: 'JetBrains Mono', monospace; font-size: 12px;
+    color: var(--cream);
+  }
+  .ratio-bar > div:nth-child(1) { flex: 60; background: var(--cream); color: var(--stone-700); border: 1px solid var(--stone-300); }
+  .ratio-bar > div:nth-child(2) { flex: 25; background: var(--sage-400); }
+  .ratio-bar > div:nth-child(3) { flex: 10; background: var(--earth-sand); color: var(--ink); }
+  .ratio-bar > div:nth-child(4) { flex: 5;  background: var(--coral-400); }
+
+  /* ---------- Typography ---------- */
+  .type-section { background: var(--bone); }
+  .type-card {
+    background: var(--cream);
+    border: 1px solid var(--stone-300);
+    padding: 48px;
+  }
+  .type-card .label {
+    display: flex; justify-content: space-between;
+    padding-bottom: 18px;
+    border-bottom: 1px solid var(--stone-300);
+    margin-bottom: 32px;
+    font-family: 'JetBrains Mono', monospace; font-size: 11px;
+    letter-spacing: 0.2em; text-transform: uppercase;
+    color: var(--stone-500);
+  }
+  .type-card .label strong { color: var(--ink); font-weight: 500; }
+  .type-card .specimen {
+    font-family: 'Fraunces', serif;
+    font-size: clamp(80px, 13vw, 180px);
+    line-height: 0.9;
+    letter-spacing: -0.03em;
+    color: var(--sage-700);
+  }
+  .type-card .specimen em { font-style: italic; color: var(--coral-500); font-weight: 300;}
+  .type-card.sans .specimen {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    color: var(--ink);
+  }
+  .type-card .alphabet {
+    margin-top: 32px;
+    padding-top: 24px;
+    border-top: 1px solid var(--stone-300);
+    font-size: 20px;
+    line-height: 1.4;
+    color: var(--stone-700);
+    word-spacing: 0.15em;
+  }
+  .weights {
+    margin-top: 32px;
+    display: flex; gap: 24px; flex-wrap: wrap;
+    padding-top: 24px;
+    border-top: 1px solid var(--stone-300);
+  }
+  .weights > div { text-align: left; }
+  .weights .w-sample { font-size: 28px; color: var(--ink); }
+  .weights .w-label  { font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--stone-500); letter-spacing: 0.1em; margin-top: 4px; }
+  .type-card.sans .weights .w-sample { font-family: 'Nunito', sans-serif; }
+  .type-card .weights .w-sample { font-family: 'Fraunces', serif; }
+
+  .type-usage {
+    margin-top: 40px;
+    border: 1px solid var(--stone-300);
+    background: var(--cream);
+    padding: 32px 40px;
+  }
+  .type-usage table { width: 100%; border-collapse: collapse; }
+  .type-usage th, .type-usage td {
+    text-align: left; padding: 14px 12px;
+    border-bottom: 1px solid var(--stone-300);
+    font-size: 14px;
+  }
+  .type-usage th {
+    font-family: 'JetBrains Mono', monospace; font-size: 10px;
+    letter-spacing: 0.2em; text-transform: uppercase;
+    color: var(--stone-500); font-weight: 400;
+  }
+  .type-usage td.sample { font-size: 22px; }
+  .type-usage tr:last-child td { border-bottom: 0; }
+
+  /* ---------- Voice ---------- */
+  .voice { background: var(--cream); }
+  .voice-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0;
+    border: 1px solid var(--stone-300);
+  }
+  @media (max-width: 820px) { .voice-grid { grid-template-columns: repeat(2, 1fr); } }
+  .voice-grid > div {
+    padding: 32px;
+    border-right: 1px solid var(--stone-300);
+    border-bottom: 1px solid var(--stone-300);
+  }
+  .voice-grid > div:nth-child(4n) { border-right: 0; }
+  .voice-grid > div:nth-last-child(-n+4) { border-bottom: 0; }
+  @media (max-width: 820px) {
+    .voice-grid > div:nth-child(4n) { border-right: 1px solid var(--stone-300); }
+    .voice-grid > div:nth-child(2n) { border-right: 0; }
+    .voice-grid > div:nth-last-child(-n+4) { border-bottom: 1px solid var(--stone-300); }
+    .voice-grid > div:nth-last-child(-n+2) { border-bottom: 0; }
+  }
+  .voice-grid h4 {
+    font-family: 'Fraunces', serif; font-size: 26px; font-weight: 400;
+    color: var(--sage-700); margin-bottom: 14px;
+  }
+  .voice-grid p { font-size: 14px; color: var(--stone-700); }
+
+  .say {
+    margin-top: 60px;
+    display: grid; grid-template-columns: 1fr 1fr; gap: 0;
+    border: 1px solid var(--stone-300);
+  }
+  @media (max-width: 820px) { .say { grid-template-columns: 1fr; } }
+  .say > div { padding: 40px; }
+  .say .yes { background: var(--sage-50); border-right: 1px solid var(--stone-300); }
+  .say .no  { background: var(--coral-50); }
+  @media (max-width: 820px) {
+    .say .yes { border-right: 0; border-bottom: 1px solid var(--stone-300); }
+  }
+  .say h4 {
+    font-family: 'Fraunces', serif; font-size: 24px; font-weight: 400;
+    margin-bottom: 20px; display: flex; align-items: center; gap: 10px;
+  }
+  .say .yes h4 { color: var(--sage-700); }
+  .say .no  h4 { color: var(--coral-600); }
+  .say ul { list-style: none; padding: 0; margin: 0; }
+  .say li {
+    padding: 12px 0; border-bottom: 1px dashed var(--stone-300);
+    font-family: 'Fraunces', serif; font-size: 19px; font-style: italic;
+    font-weight: 300; color: var(--ink);
+  }
+  .say li:last-child { border-bottom: 0; }
+
+  /* ---------- Applications ---------- */
+  .apps { background: var(--sage-50); }
+  .app-card {
+    aspect-ratio: 4 / 5;
+    padding: 40px;
+    display: flex; flex-direction: column; justify-content: space-between;
+    position: relative; overflow: hidden;
+    border-radius: 2px;
+  }
+  .app-card .caption {
+    position: absolute; bottom: 16px; left: 16px;
+    font-family: 'JetBrains Mono', monospace; font-size: 10px;
+    letter-spacing: 0.2em; text-transform: uppercase;
+    color: rgba(255,255,255,0.75);
+  }
+  .app-card.light .caption { color: var(--stone-500); }
+
+  /* Business card */
+  .biz-card {
+    background: var(--cream);
+    border: 1px solid var(--stone-300);
+    aspect-ratio: 85/55;
+    padding: 24px;
+    display: flex; flex-direction: column; justify-content: space-between;
+    border-radius: 3px;
+  }
+  .biz-card .name {
+    font-family: 'Fraunces', serif; font-size: 22px;
+    color: var(--sage-700); letter-spacing: -0.01em;
+  }
+  .biz-card .role {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 9px; letter-spacing: 0.22em;
+    text-transform: uppercase; color: var(--stone-500);
+    margin-top: 2px;
+  }
+  .biz-card .details {
+    font-size: 11px; color: var(--stone-700); line-height: 1.6;
+  }
+  .biz-card .logo-mini {
+    display: flex; align-items: center; gap: 8px;
+  }
+  .biz-card .logo-mini img { height: 26px; width: auto; }
+
+  /* Social post */
+  .social-post {
+    background: var(--sage-400);
+    color: var(--cream);
+    aspect-ratio: 1 / 1;
+    padding: 36px;
+    display: flex; flex-direction: column; justify-content: space-between;
+    position: relative; overflow: hidden;
+    border-radius: 2px;
+  }
+  .social-post::before {
+    content: ""; position: absolute;
+    right: -90px; bottom: -90px;
+    width: 280px; height: 280px;
+    background: var(--coral-400);
+    border-radius: 50%;
+  }
+  .social-post::after {
+    content: ""; position: absolute;
+    right: -10px; bottom: 40px;
+    width: 120px; height: 60px;
+    background: var(--sage-400);
+    border-radius: 0 0 120px 120px;
+    z-index: 1;
+  }
+  .social-post .tag {
+    font-family: 'JetBrains Mono', monospace; font-size: 10px;
+    letter-spacing: 0.22em; text-transform: uppercase;
+    color: var(--sage-100);
+    position: relative; z-index: 2;
+  }
+  .social-post h3 {
+    font-family: 'Fraunces', serif;
+    font-size: clamp(28px, 3.2vw, 42px);
+    line-height: 1.02; letter-spacing: -0.02em;
+    color: var(--cream); font-weight: 400;
+    max-width: 10ch;
+    position: relative; z-index: 2;
+  }
+  .social-post h3 em { font-style: italic; color: var(--coral-100); }
+  .social-post .foot {
+    font-family: 'JetBrains Mono', monospace; font-size: 10px;
+    letter-spacing: 0.2em; text-transform: uppercase;
+    color: var(--sage-100);
+    position: relative; z-index: 2;
+  }
+
+  /* Signage */
+  .signage {
+    background: var(--cream);
+    border: 1px solid var(--stone-300);
+    aspect-ratio: 1 / 1;
+    padding: 40px;
+    display: grid; place-items: center;
+    position: relative;
+  }
+  .signage img { max-height: 70%; }
+  .signage::after {
+    content: "ROTULACIÓN / FACHADA";
+    position: absolute; bottom: 14px; left: 16px;
+    font-family: 'JetBrains Mono', monospace; font-size: 10px;
+    letter-spacing: 0.22em; color: var(--stone-500);
+  }
+
+  /* Pattern block — grid of “o” smiles, a systematic riff on the logomark */
+  .pattern {
+    aspect-ratio: 1/1;
+    background-color: var(--cream);
+    background-image:
+      /* row 1 */
+      radial-gradient(circle at 16.66% 16.66%, var(--coral-400) 0 10%, transparent 10.5%),
+      radial-gradient(circle at 50%    16.66%, var(--sage-400)  0 10%, transparent 10.5%),
+      radial-gradient(circle at 83.33% 16.66%, var(--earth-sand)  0 10%, transparent 10.5%),
+      /* row 2 */
+      radial-gradient(circle at 16.66% 50%, var(--sage-700)   0 10%, transparent 10.5%),
+      radial-gradient(circle at 50%    50%, var(--coral-400)  0 10%, transparent 10.5%),
+      radial-gradient(circle at 83.33% 50%, var(--earth-khaki) 0 10%, transparent 10.5%),
+      /* row 3 */
+      radial-gradient(circle at 16.66% 83.33%, var(--earth-sand)  0 10%, transparent 10.5%),
+      radial-gradient(circle at 50%    83.33%, var(--sage-400)   0 10%, transparent 10.5%),
+      radial-gradient(circle at 83.33% 83.33%, var(--coral-400)  0 10%, transparent 10.5%);
+    position: relative;
+    border-radius: 2px;
+    overflow: hidden;
+  }
+  /* cream “smiles” cutting each coral disc — the logo gesture, repeated */
+  .pattern::before {
+    content: "";
+    position: absolute; inset: 0;
+    background-image:
+      radial-gradient(circle at 16.66% 18.5%, var(--cream) 0 6%, transparent 6.3%),
+      radial-gradient(circle at 50%    52%,   var(--cream) 0 6%, transparent 6.3%),
+      radial-gradient(circle at 83.33% 85.2%, var(--cream) 0 6%, transparent 6.3%);
+    pointer-events: none;
+  }
+  .pattern::after {
+    content: "PATRÓN GRÁFICO";
+    position: absolute; bottom: 14px; left: 16px;
+    font-family: 'JetBrains Mono', monospace; font-size: 10px;
+    letter-spacing: 0.22em; color: var(--ink); opacity: 0.6;
+  }
+
+  /* Footer */
+  footer {
+    background: var(--sage-700);
+    color: var(--sage-100);
+    padding: 80px var(--gutter);
+  }
+  footer .wrap {
+    display: grid; grid-template-columns: 1fr auto; gap: 40px; align-items: end;
+  }
+  @media (max-width: 720px) { footer .wrap { grid-template-columns: 1fr; } }
+  footer h2 {
+    font-family: 'Fraunces', serif; font-weight: 300;
+    font-size: clamp(32px, 4vw, 52px);
+    line-height: 1;
+    color: var(--cream);
+    letter-spacing: -0.02em;
+  }
+  footer h2 em { font-style: italic; color: var(--coral-200); }
+  footer .meta {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase;
+    color: var(--sage-200);
+    text-align: right;
+    line-height: 1.9;
+  }
+  @media (max-width: 720px) { footer .meta { text-align: left; } }
+
+  /* Utility */
+  .lead-col { max-width: 60ch; }
+
+  /* Don't-use cross overlay on logo */
+  .cross {
+    position: relative;
+  }
+  .cross::after {
+    content: ""; position: absolute; inset: 0;
+    background:
+      linear-gradient(to top right, transparent calc(50% - 1px), var(--coral-500) calc(50% - 1px), var(--coral-500) calc(50% + 1px), transparent calc(50% + 1px)),
+      linear-gradient(to top left,  transparent calc(50% - 1px), var(--coral-500) calc(50% - 1px), var(--coral-500) calc(50% + 1px), transparent calc(50% + 1px));
+    opacity: 0.35;
+    pointer-events: none;
+  }
+
+</style>
+</head>
+<body>
+
+<!-- ============ COVER ============ -->
+<section class="cover" data-screen-label="01 Portada">
+  <div class="bar">
+    <span>Dentikos · Clínica Dental</span>
+    <span>Guía de Marca · v1.0</span>
+    <span>2026</span>
+  </div>
+
+  <h1>Sonreír,<br/>con <em>calma.</em></h1>
+
+  <dl class="meta">
+    <div><dt>Documento</dt><dd>Manual de identidad</dd></div>
+    <div><dt>Edición</dt><dd>Primera · 2026</dd></div>
+    <div><dt>Sector</dt><dd>Salud bucodental</dd></div>
+    <div><dt>Categoría</dt><dd>Clínica familiar</dd></div>
+  </dl>
+</section>
+
+<!-- ============ TOC ============ -->
+<section class="section toc" data-screen-label="02 Índice">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="num">00</div>
+      <div>
+        <div class="eyebrow">Índice</div>
+        <h2>Qué hay dentro.</h2>
+        <p class="lead">Un manual corto y útil. Cuatro capítulos de identidad, un recordatorio de voz y algunas piezas para empezar a aplicar la marca sin perder el tono.</p>
+      </div>
+    </div>
+
+    <ol>
+      <li><span class="idx">01</span><span class="name">Manifiesto y valores</span><span class="desc">Quiénes somos y cómo nos comportamos.</span></li>
+      <li><span class="idx">02</span><span class="name">Logo e isotipo</span><span class="desc">Versiones, construcción, usos correctos e incorrectos.</span></li>
+      <li><span class="idx">03</span><span class="name">Paleta cromática</span><span class="desc">Salvia, coral y tonos tierra. Proporciones.</span></li>
+      <li><span class="idx">04</span><span class="name">Tipografía</span><span class="desc">Fraunces para titulares, Nunito para lectura.</span></li>
+      <li><span class="idx">05</span><span class="name">Tono de voz</span><span class="desc">Cercano, claro, sin paternalismo.</span></li>
+      <li><span class="idx">06</span><span class="name">Aplicaciones</span><span class="desc">Tarjetas, redes, señalética, patrones.</span></li>
+    </ol>
+  </div>
+</section>
+
+<!-- ============ 01 MANIFESTO ============ -->
+<section class="section manifesto" data-screen-label="03 Manifiesto">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="num">01</div>
+      <div>
+        <div class="eyebrow">Manifiesto</div>
+        <h2>Reinventar la consulta.</h2>
+        <p class="lead">Dentikos existe para que ir al dentista deje de dar miedo. Somos una clínica familiar que cuida de mayores y pequeños con cercanía, rigor clínico y un lenguaje que se entiende a la primera.</p>
+      </div>
+    </div>
+
+    <div class="grid g-2" style="gap: 80px; align-items: start;">
+      <div>
+        <p class="quote">
+          <em>“Queremos reinventar</em> la experiencia de ir al dentista. Debe sentirse <span class="sage">en positivo</span> para ti y para tu familia.”
+        </p>
+      </div>
+      <div class="lead-col">
+        <p style="color: var(--stone-700);">Atendemos a familias que llegan con dudas, miedos heredados o una experiencia previa que no quieren repetir. Nuestro trabajo empieza antes del sillón: escuchar, explicar y devolver el control al paciente.</p>
+        <p style="color: var(--stone-700);">La marca debe sonar a eso. A consulta luminosa, a conversación tranquila, a equipo humano que sabe lo que hace y lo cuenta sin tecnicismos.</p>
+        <p style="color: var(--stone-700);">Si una pieza transmite frío hospitalario, autoridad médica distante o urgencia comercial, está fuera de marca.</p>
+      </div>
+    </div>
+
+    <div class="values">
+      <div>
+        <h4><span class="n">01</span>Cercanía</h4>
+        <p>Tuteamos. Miramos a los ojos. Explicamos con palabras de andar por casa. El paciente es el protagonista, no el procedimiento.</p>
+      </div>
+      <div>
+        <h4><span class="n">02</span>Calma</h4>
+        <p>Tonos tierra, ritmos pausados, espacios con aire. Queremos que la espera también forme parte del cuidado.</p>
+      </div>
+      <div>
+        <h4><span class="n">03</span>Confianza</h4>
+        <p>Rigor clínico sin bata fría. Contamos el porqué de cada tratamiento y acompañamos el proceso entero, no solo la visita.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 02 LOGO ============ -->
+<section class="section logo-section" data-screen-label="04 Logo">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="num">02</div>
+      <div>
+        <div class="eyebrow">Identidad visual — Logo</div>
+        <h2>El logotipo.</h2>
+        <p class="lead">El logo de Dentikos nace de una dualidad: una familia tipográfica serif, redonda y cálida, y una “o” coral con forma de sonrisa — el gesto que resume para qué estamos. El isotipo es una muela estilizada que se lee como dos figuras abrazadas, padre e hijo.</p>
+      </div>
+    </div>
+
+    <!-- Main logo display -->
+    <div class="grid g-2" style="margin-bottom: 32px;">
+      <div class="logo-stage logo-big">
+        <span class="tag">01 · Versión principal · Color</span>
+        <img src="assets/logo-principal.png" alt="Logo Dentikos principal" />
+      </div>
+      <div class="logo-stage logo-big paper">
+        <span class="tag">02 · Fondo papel · Color</span>
+        <img src="assets/logo-principal.png" alt="Logo Dentikos sobre papel" />
+      </div>
+    </div>
+
+    <!-- Variants -->
+    <div style="margin: 80px 0 24px;">
+      <div class="eyebrow">Versiones</div>
+      <h3 class="serif" style="font-size: 32px; font-weight: 400; margin-top: 6px; margin-bottom: 24px;">Una marca, cinco vestidos.</h3>
+      <p style="max-width: 62ch; color: var(--stone-700); margin-bottom: 32px;">Usa siempre la versión de color sobre fondos claros y neutros. Las versiones monocromas están pensadas para impresos de una tinta, grabados o fondos fotográficos con poco contraste.</p>
+    </div>
+
+    <div class="grid g-3">
+      <div class="logo-stage">
+        <span class="tag">Principal · Color</span>
+        <img src="assets/logo-principal.png" alt="Logo color" />
+      </div>
+      <div class="logo-stage sage">
+        <span class="tag">Mono · Crema sobre salvia</span>
+        <img src="assets/logo-blanco.png" alt="Logo blanco" style="filter: brightness(0) invert(1);" />
+      </div>
+      <div class="logo-stage coral">
+        <span class="tag">Mono · Crema sobre coral</span>
+        <img src="assets/logo-blanco.png" alt="Logo blanco" style="filter: brightness(0) invert(1);" />
+      </div>
+      <div class="logo-stage">
+        <span class="tag">Gris · 40%</span>
+        <img src="assets/logo-gris.png" alt="Logo gris" />
+      </div>
+      <div class="logo-stage">
+        <span class="tag">Negro 100%</span>
+        <img src="assets/logo-negro.png" alt="Logo negro" />
+      </div>
+      <div class="logo-stage dark">
+        <span class="tag">Mono · Crema sobre oliva</span>
+        <img src="assets/logo-blanco.png" alt="Logo blanco" style="filter: brightness(0) invert(1);" />
+      </div>
+    </div>
+
+    <!-- Isotipo -->
+    <div style="margin: 100px 0 32px;">
+      <div class="eyebrow">Isotipo</div>
+      <h3 class="serif" style="font-size: 32px; font-weight: 400; margin-top: 6px; margin-bottom: 12px;">El símbolo por sí solo.</h3>
+      <p style="max-width: 62ch; color: var(--stone-700);">La muela se puede usar sin wordmark en redes sociales (avatar), favicon, sellos, pines y cualquier aplicación pequeña o cuadrada. Respeta siempre el área de protección.</p>
+    </div>
+
+    <div class="grid g-4">
+      <div class="logo-stage" style="min-height: 220px;">
+        <img src="assets/logo-tooth.png" alt="Isotipo color" style="max-height: 160px;" />
+      </div>
+      <div class="logo-stage sage" style="min-height: 220px;">
+        <img src="assets/logo-tooth-cream.png" alt="Isotipo crema" style="max-height: 160px;" />
+      </div>
+      <div class="logo-stage coral" style="min-height: 220px;">
+        <img src="assets/logo-tooth-cream.png" alt="Isotipo sobre coral" style="max-height: 160px;" />
+      </div>
+      <div class="logo-stage dark" style="min-height: 220px;">
+        <img src="assets/logo-tooth-cream.png" alt="Isotipo sobre oliva" style="max-height: 160px;" />
+      </div>
+    </div>
+
+    <!-- Wordmark-only (sin tagline) -->
+    <div style="margin: 80px 0 32px;">
+      <div class="eyebrow">Wordmark</div>
+      <h3 class="serif" style="font-size: 32px; font-weight: 400; margin-top: 6px; margin-bottom: 12px;">Logotipo sin tagline.</h3>
+      <p style="max-width: 62ch; color: var(--stone-700);">Para usos donde ya hay contexto de marca (papelería interna, firmas de email, cabecera web) se puede emplear el wordmark sin la bajada “Clínica Dental”.</p>
+    </div>
+    <div class="grid g-2">
+      <div class="logo-stage" style="min-height: 220px;">
+        <span class="tag">Wordmark · Color</span>
+        <img src="assets/logo-wordmark.png" alt="Wordmark Dentikos" style="max-height: 120px;" />
+      </div>
+      <div class="logo-stage sage" style="min-height: 220px;">
+        <span class="tag">Wordmark · Crema sobre salvia</span>
+        <img src="assets/logo-wordmark.png" alt="Wordmark crema" style="max-height: 120px; filter: brightness(0) invert(1);" />
+      </div>
+    </div>
+
+    <!-- Clear space + minimum -->
+    <div style="margin: 100px 0 32px;">
+      <div class="eyebrow">Área de protección y tamaño mínimo</div>
+      <h3 class="serif" style="font-size: 32px; font-weight: 400; margin-top: 6px; margin-bottom: 12px;">Dale aire.</h3>
+      <p style="max-width: 62ch; color: var(--stone-700);">El área de protección equivale a la altura de la “o” del wordmark (X). Ningún otro elemento gráfico, texto ni borde de página debe invadir ese espacio.</p>
+    </div>
+
+    <div class="grid g-2">
+      <div class="clearspace">
+        <div class="frame">
+          <img src="assets/logo-principal.png" alt="Área de protección" />
+        </div>
+      </div>
+      <div class="logo-stage" style="flex-direction: column; gap: 24px;">
+        <span class="tag">Tamaño mínimo</span>
+        <div style="display: flex; align-items: baseline; gap: 40px;">
+          <div style="text-align: center;">
+            <img src="assets/logo-principal.png" alt="Mínimo digital" style="height: 32px;"/>
+            <div class="mono" style="margin-top: 10px; color: var(--stone-500);">DIGITAL · 120 px ancho</div>
+          </div>
+          <div style="text-align: center;">
+            <img src="assets/logo-principal.png" alt="Mínimo impresión" style="height: 56px;"/>
+            <div class="mono" style="margin-top: 10px; color: var(--stone-500);">IMPRESIÓN · 25 mm ancho</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Dos and don'ts -->
+    <div style="margin: 100px 0 32px;">
+      <div class="eyebrow">Usos correctos e incorrectos</div>
+      <h3 class="serif" style="font-size: 32px; font-weight: 400; margin-top: 6px; margin-bottom: 12px;">Qué sí, qué no.</h3>
+    </div>
+
+    <div class="grid g-4">
+      <div class="dos yes">
+        <div class="example"><img src="assets/logo-principal.png" alt="Sí" /></div>
+        <div class="label"><span class="badge">✓</span><span>Úsalo en color sobre fondos claros y neutros.</span></div>
+      </div>
+      <div class="dos yes" style="background: var(--sage-400);">
+        <div class="example"><img src="assets/logo-blanco.png" alt="Sí" style="filter: brightness(0) invert(1);" /></div>
+        <div class="label" style="border-color: rgba(255,255,255,0.3); color: var(--cream);"><span class="badge">✓</span><span>En versión crema sobre color corporativo.</span></div>
+      </div>
+      <div class="dos no">
+        <div class="example cross"><img src="assets/logo-principal.png" alt="No" style="transform: rotate(-8deg);" /></div>
+        <div class="label"><span class="badge">✗</span><span>No lo rotes ni lo inclines.</span></div>
+      </div>
+      <div class="dos no">
+        <div class="example cross"><img src="assets/logo-principal.png" alt="No" style="transform: scaleX(0.6);" /></div>
+        <div class="label"><span class="badge">✗</span><span>No lo estires ni deformes las proporciones.</span></div>
+      </div>
+      <div class="dos no" style="background: #ff3b00;">
+        <div class="example cross"><img src="assets/logo-principal.png" alt="No" /></div>
+        <div class="label" style="border-color: rgba(255,255,255,0.3); color: var(--cream);"><span class="badge">✗</span><span>No lo uses sobre colores ajenos a la paleta.</span></div>
+      </div>
+      <div class="dos no">
+        <div class="example cross" style="background: url('data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22100%22 height=%22100%22><defs><pattern id=%22d%22 width=%228%22 height=%228%22 patternUnits=%22userSpaceOnUse%22><circle cx=%224%22 cy=%224%22 r=%221%22 fill=%22%23888%22/></pattern></defs><rect width=%22100%22 height=%22100%22 fill=%22url(%23d)%22/></svg>');"><img src="assets/logo-principal.png" alt="No" /></div>
+        <div class="label"><span class="badge">✗</span><span>No lo coloques sobre fondos ruidosos.</span></div>
+      </div>
+      <div class="dos no">
+        <div class="example cross"><img src="assets/logo-principal.png" alt="No" style="filter: hue-rotate(140deg);" /></div>
+        <div class="label"><span class="badge">✗</span><span>No alteres los colores del logotipo.</span></div>
+      </div>
+      <div class="dos no">
+        <div class="example cross"><img src="assets/logo-principal.png" alt="No" style="filter: drop-shadow(0 4px 8px rgba(0,0,0,0.4));" /></div>
+        <div class="label"><span class="badge">✗</span><span>No le añadas sombras, brillos ni contornos.</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 03 COLORS ============ -->
+<section class="section colors" data-screen-label="05 Color">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="num">03</div>
+      <div>
+        <div class="eyebrow">Identidad visual — Color</div>
+        <h2>Paleta cromática.</h2>
+        <p class="lead">Un sistema de calma. El verde salvia manda: es el color de la marca, de la confianza serena y del entorno clínico amable. El coral aparece como acento humano — la sonrisa del logo — y nunca domina. Una segunda línea de tonos tierra introduce calidez para piezas editoriales, señalética y fondos.</p>
+      </div>
+    </div>
+
+    <!-- Primary colors -->
+    <div class="grid g-2">
+      <div class="swatch dark" style="background: var(--sage-400); aspect-ratio: auto; min-height: 360px;">
+        <div>
+          <div class="eyebrow" style="color: var(--sage-100);">Color primario</div>
+          <div class="name" style="font-size: 48px; margin-top: 8px;">Verde Salvia</div>
+          <p style="max-width: 30ch; color: var(--sage-100); font-size: 14px; margin-top: 14px;">El protagonista. 60–70% de cualquier pieza. Aporta calma, naturalidad y confianza clínica.</p>
+        </div>
+        <div class="codes">
+          <div><span>HEX</span><span>#A3B47C</span></div>
+          <div><span>RGB</span><span>163 · 180 · 124</span></div>
+          <div><span>CMYK</span><span>35 · 12 · 55 · 10</span></div>
+          <div><span>PANTONE</span><span>576 C</span></div>
+        </div>
+      </div>
+      <div class="swatch dark" style="background: var(--coral-400); aspect-ratio: auto; min-height: 360px;">
+        <div>
+          <div class="eyebrow" style="color: var(--coral-100);">Color acento</div>
+          <div class="name" style="font-size: 48px; margin-top: 8px;">Coral Sonrisa</div>
+          <p style="max-width: 30ch; color: var(--coral-100); font-size: 14px; margin-top: 14px;">El gesto humano. Máximo 10–15% por pieza. Para CTAs, detalles, iconografía clave y momentos de cercanía.</p>
+        </div>
+        <div class="codes">
+          <div><span>HEX</span><span>#E9735F</span></div>
+          <div><span>RGB</span><span>233 · 115 · 95</span></div>
+          <div><span>CMYK</span><span>3 · 68 · 62 · 0</span></div>
+          <div><span>PANTONE</span><span>178 C</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scales -->
+    <div class="palette-row">
+      <div>
+        <div class="role">Escala Salvia</div>
+        <h3>Verde Salvia</h3>
+        <p>Fondos, tipografías secundarias, bloques de sección. La tonalidad 400 es la oficial del logotipo.</p>
+      </div>
+      <div class="scale">
+        <div class="swatch" style="background: var(--sage-100);"><div class="name" style="font-size: 16px;">100</div><div class="codes"><div>#E5EAD7</div></div></div>
+        <div class="swatch" style="background: var(--sage-200);"><div class="name" style="font-size: 16px;">200</div><div class="codes"><div>#CDD6B3</div></div></div>
+        <div class="swatch dark" style="background: var(--sage-400);"><div class="name" style="font-size: 16px;">400 ●</div><div class="codes"><div>#A3B47C</div></div></div>
+        <div class="swatch dark" style="background: var(--sage-600);"><div class="name" style="font-size: 16px;">600</div><div class="codes"><div>#6B7C4A</div></div></div>
+        <div class="swatch dark" style="background: var(--sage-700);"><div class="name" style="font-size: 16px;">700</div><div class="codes"><div>#4F5C35</div></div></div>
+      </div>
+    </div>
+
+    <div class="palette-row">
+      <div>
+        <div class="role">Escala Coral</div>
+        <h3>Coral Sonrisa</h3>
+        <p>Acento humano. El 400 es la tonalidad oficial del símbolo. Úsalo con intención: poco y bien.</p>
+      </div>
+      <div class="scale">
+        <div class="swatch" style="background: var(--coral-100);"><div class="name" style="font-size: 16px;">100</div><div class="codes"><div>#FAD5CF</div></div></div>
+        <div class="swatch" style="background: var(--coral-200);"><div class="name" style="font-size: 16px;">200</div><div class="codes"><div>#F4B2A6</div></div></div>
+        <div class="swatch dark" style="background: var(--coral-400);"><div class="name" style="font-size: 16px;">400 ●</div><div class="codes"><div>#E9735F</div></div></div>
+        <div class="swatch dark" style="background: var(--coral-500);"><div class="name" style="font-size: 16px;">500</div><div class="codes"><div>#D75C47</div></div></div>
+        <div class="swatch dark" style="background: var(--coral-700);"><div class="name" style="font-size: 16px;">700</div><div class="codes"><div>#8F3524</div></div></div>
+      </div>
+    </div>
+
+    <div class="palette-row">
+      <div>
+        <div class="role">Secundaria · Tierra</div>
+        <h3>Tonos Tierra</h3>
+        <p>Arena, oliva, caqui y toffee. Aportan calidez editorial a fondos, ilustraciones y material impreso. Nunca se usan como color principal de marca.</p>
+      </div>
+      <div class="scale">
+        <div class="swatch" style="background: var(--earth-sand);"><div class="name" style="font-size: 16px;">Arena</div><div class="codes"><div>#D6B896</div></div></div>
+        <div class="swatch dark" style="background: var(--earth-khaki);"><div class="name" style="font-size: 16px;">Caqui</div><div class="codes"><div>#A39662</div></div></div>
+        <div class="swatch dark" style="background: var(--earth-olive);"><div class="name" style="font-size: 16px;">Oliva</div><div class="codes"><div>#A19460</div></div></div>
+        <div class="swatch dark" style="background: var(--earth-toffee);"><div class="name" style="font-size: 16px;">Toffee</div><div class="codes"><div>#A07749</div></div></div>
+        <div class="swatch dark" style="background: var(--stone-700);"><div class="name" style="font-size: 16px;">Tinta</div><div class="codes"><div>#4A4538</div></div></div>
+      </div>
+    </div>
+
+    <div class="palette-row">
+      <div>
+        <div class="role">Neutros</div>
+        <h3>Crema & Piedra</h3>
+        <p>La base respiratoria de la marca. Sustituyen al blanco puro — demasiado frío para el tono Dentikos — y a los grises clínicos.</p>
+      </div>
+      <div class="scale">
+        <div class="swatch" style="background: var(--cream);"><div class="name" style="font-size: 16px;">Crema</div><div class="codes"><div>#FAF6EF</div></div></div>
+        <div class="swatch" style="background: var(--bone);"><div class="name" style="font-size: 16px;">Hueso</div><div class="codes"><div>#F3ECE0</div></div></div>
+        <div class="swatch" style="background: var(--paper);"><div class="name" style="font-size: 16px;">Papel</div><div class="codes"><div>#EBE3D3</div></div></div>
+        <div class="swatch dark" style="background: var(--stone-500);"><div class="name" style="font-size: 16px;">Piedra</div><div class="codes"><div>#8A8270</div></div></div>
+        <div class="swatch dark" style="background: var(--ink);"><div class="name" style="font-size: 16px;">Tinta</div><div class="codes"><div>#2A2620</div></div></div>
+      </div>
+    </div>
+
+    <!-- Ratios -->
+    <div class="ratios">
+      <h3>Proporciones recomendadas</h3>
+      <p style="color: var(--stone-700); font-size: 14px; max-width: 60ch;">Una guía para equilibrar cualquier pieza. La marca respira cuando el neutro manda y el coral aparece como pincelada final.</p>
+      <div class="ratio-bar" style="margin-top: 24px;">
+        <div>Crema · 60%</div>
+        <div>Salvia · 25%</div>
+        <div>Tierra · 10%</div>
+        <div>Coral</div>
+      </div>
+      <div style="display: flex; gap: 24px; margin-top: 14px; font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--stone-500); letter-spacing: 0.1em;">
+        <span>BASE NEUTRA</span>
+        <span>PERSONALIDAD</span>
+        <span>CALIDEZ</span>
+        <span>ACENTO</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 04 TYPE ============ -->
+<section class="section type-section" data-screen-label="06 Tipografía">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="num">04</div>
+      <div>
+        <div class="eyebrow">Identidad visual — Tipografía</div>
+        <h2>Tipografía.</h2>
+        <p class="lead">Una pareja que imita la personalidad del logo: una serif contemporánea, curva y con carácter para los titulares, y una sans humanista, redondeada y legible para el cuerpo. Cálida y clínica al mismo tiempo.</p>
+      </div>
+    </div>
+
+    <!-- Fraunces -->
+    <div class="type-card" style="margin-bottom: 32px;">
+      <div class="label">
+        <span><strong>Fraunces</strong> · Google Fonts · Libre</span>
+        <span>Primaria · Display</span>
+      </div>
+      <div class="specimen">Aa <em>Bb</em></div>
+      <div class="alphabet">
+        ABCDEFGHIJKLMNÑOPQRSTUVWXYZ<br/>
+        abcdefghijklmnñopqrstuvwxyz<br/>
+        0123456789 &amp; · ! ? , . ; : — “ ”
+      </div>
+      <div class="weights">
+        <div><div class="w-sample" style="font-weight: 300;">Aa</div><div class="w-label">LIGHT 300</div></div>
+        <div><div class="w-sample" style="font-weight: 400;">Aa</div><div class="w-label">REGULAR 400</div></div>
+        <div><div class="w-sample" style="font-weight: 500;">Aa</div><div class="w-label">MEDIUM 500</div></div>
+        <div><div class="w-sample" style="font-weight: 600;">Aa</div><div class="w-label">SEMIBOLD 600</div></div>
+        <div><div class="w-sample" style="font-style: italic; font-weight: 300;">Aa</div><div class="w-label">ITALIC 300</div></div>
+      </div>
+    </div>
+
+    <!-- Nunito -->
+    <div class="type-card sans" style="margin-bottom: 32px;">
+      <div class="label">
+        <span><strong>Nunito</strong> · Google Fonts · Libre</span>
+        <span>Secundaria · Texto</span>
+      </div>
+      <div class="specimen">Aa Bb</div>
+      <div class="alphabet" style="font-family: 'Nunito', sans-serif;">
+        ABCDEFGHIJKLMNÑOPQRSTUVWXYZ<br/>
+        abcdefghijklmnñopqrstuvwxyz<br/>
+        0123456789 &amp; · ! ? , . ; : — “ ”
+      </div>
+      <div class="weights">
+        <div><div class="w-sample" style="font-weight: 400;">Aa</div><div class="w-label">REGULAR 400</div></div>
+        <div><div class="w-sample" style="font-weight: 500;">Aa</div><div class="w-label">MEDIUM 500</div></div>
+        <div><div class="w-sample" style="font-weight: 600;">Aa</div><div class="w-label">SEMIBOLD 600</div></div>
+        <div><div class="w-sample" style="font-weight: 700;">Aa</div><div class="w-label">BOLD 700</div></div>
+        <div><div class="w-sample" style="font-weight: 800;">Aa</div><div class="w-label">EXTRABOLD 800</div></div>
+      </div>
+    </div>
+
+    <!-- Usage table -->
+    <div class="type-usage">
+      <h3 class="serif" style="font-size: 24px; font-weight: 400; margin-bottom: 6px;">Jerarquía de uso</h3>
+      <p style="color: var(--stone-700); font-size: 14px; margin-bottom: 24px;">Guía rápida para mantener consistencia en web, redes e impresos.</p>
+      <table>
+        <thead>
+          <tr>
+            <th>Uso</th>
+            <th>Familia</th>
+            <th>Peso</th>
+            <th>Ejemplo</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>H1 — Hero</td>
+            <td>Fraunces</td>
+            <td>Regular 400</td>
+            <td class="sample serif" style="font-size: 36px; font-weight: 400; letter-spacing: -0.02em; color: var(--sage-700);">Sonríe tranquilo.</td>
+          </tr>
+          <tr>
+            <td>H2 — Sección</td>
+            <td>Fraunces</td>
+            <td>Regular 400</td>
+            <td class="sample serif" style="font-size: 28px; font-weight: 400; color: var(--ink);">Servicios del día a día</td>
+          </tr>
+          <tr>
+            <td>H3 — Subsección</td>
+            <td>Fraunces</td>
+            <td>Medium 500</td>
+            <td class="sample serif" style="font-size: 20px; font-weight: 500;">Odontología familiar</td>
+          </tr>
+          <tr>
+            <td>Destacado / cita</td>
+            <td>Fraunces Italic</td>
+            <td>Light 300 italic</td>
+            <td class="sample serif" style="font-size: 20px; font-style: italic; font-weight: 300; color: var(--coral-500);">Te acompañamos desde el primer día.</td>
+          </tr>
+          <tr>
+            <td>Cuerpo</td>
+            <td>Nunito</td>
+            <td>Regular 400</td>
+            <td class="sample" style="font-family: 'Nunito', sans-serif; font-size: 16px;">Cuida tu salud dental con un equipo cercano.</td>
+          </tr>
+          <tr>
+            <td>UI · botón</td>
+            <td>Nunito</td>
+            <td>Semibold 600</td>
+            <td class="sample" style="font-family: 'Nunito', sans-serif; font-size: 14px; font-weight: 600;"><span style="background: var(--coral-400); color: var(--cream); padding: 10px 20px; border-radius: 999px;">Pedir cita</span></td>
+          </tr>
+          <tr>
+            <td>Eyebrow · etiqueta</td>
+            <td>JetBrains Mono</td>
+            <td>Medium 500</td>
+            <td class="sample mono" style="font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--stone-500);">CLÍNICA DENTAL</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 05 VOICE ============ -->
+<section class="section voice" data-screen-label="07 Voz">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="num">05</div>
+      <div>
+        <div class="eyebrow">Identidad verbal — Tono</div>
+        <h2>Cómo hablamos.</h2>
+        <p class="lead">Escribimos como un buen vecino que resulta ser dentista. Sin tecnicismos innecesarios, sin promesas de milagros y sin esa falsa alegría comercial. Tuteamos siempre, explicamos el porqué y dejamos al paciente elegir.</p>
+      </div>
+    </div>
+
+    <div class="voice-grid">
+      <div>
+        <h4>Cercano,<br/>no coleguilla</h4>
+        <p>Tuteamos. Hablamos como a alguien que nos importa, no como al micro de una promoción.</p>
+      </div>
+      <div>
+        <h4>Claro,<br/>no simple</h4>
+        <p>Explicamos endodoncias o implantes con palabras normales, pero sin infantilizar al paciente.</p>
+      </div>
+      <div>
+        <h4>Honesto,<br/>no frío</h4>
+        <p>Decimos lo que hace falta y lo que no, sin asustar ni inflar el diagnóstico para vender.</p>
+      </div>
+      <div>
+        <h4>Sereno,<br/>no solemne</h4>
+        <p>Tono calmado, ritmo pausado. Somos una conversación, no un comunicado médico.</p>
+      </div>
+    </div>
+
+    <div class="say">
+      <div class="yes">
+        <h4>Así sí</h4>
+        <ul>
+          <li>“Te contamos qué vamos a hacer antes de empezar.”</li>
+          <li>“Si te da miedo, cuéntanoslo. Lo resolvemos juntos.”</li>
+          <li>“Una limpieza al año, y listo. No hace falta más.”</li>
+          <li>“Los peques tienen su hueco, su silla y su ritmo.”</li>
+          <li>“Presupuesto claro, sin sorpresas.”</li>
+        </ul>
+      </div>
+      <div class="no">
+        <h4>Así no</h4>
+        <ul>
+          <li>“¡Aprovecha nuestra super promo única!”</li>
+          <li>“El paciente deberá cumplimentar el formulario.”</li>
+          <li>“Sonrisa de Hollywood garantizada.”</li>
+          <li>“Urgente: tu salud bucodental corre peligro.”</li>
+          <li>“Profesionales altamente cualificados en vanguardia.”</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 06 APPLICATIONS ============ -->
+<section class="section apps" data-screen-label="08 Aplicaciones">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="num">06</div>
+      <div>
+        <div class="eyebrow">Sistema — Aplicaciones</div>
+        <h2>La marca en la vida real.</h2>
+        <p class="lead">Ejemplos rápidos de cómo se comportan logo, color y tipografía cuando aterrizan en piezas. No son plantillas cerradas; son referencias para mantener el tono.</p>
+      </div>
+    </div>
+
+    <div class="grid g-3">
+      <!-- Business card -->
+      <div class="biz-card">
+        <div class="logo-mini">
+          <img src="assets/logo-tooth.png" alt="" style="height: 32px; width: auto;" />
+          <div class="serif" style="font-size: 20px; color: var(--sage-600); line-height: 1;">Dentikos</div>
+        </div>
+        <div>
+          <div class="name">Dra. Laura Méndez</div>
+          <div class="role">Odontóloga · Col. 28/4412</div>
+        </div>
+        <div class="details">
+          Calle Mayor, 24 · Madrid<br/>
+          +34 910 000 000<br/>
+          hola@dentikos.es
+        </div>
+      </div>
+
+      <!-- Social post -->
+      <div class="social-post">
+        <div class="tag">Post · Instagram</div>
+        <h3>Reinventamos la <em>consulta.</em></h3>
+        <div class="foot">Dentikos · Clínica Dental</div>
+      </div>
+
+      <!-- Signage -->
+      <div class="signage">
+        <img src="assets/logo-tooth.png" alt="Señalética" style="max-height: 60%;" />
+      </div>
+
+      <!-- Big headline card -->
+      <div class="app-card" style="background: var(--cream); border: 1px solid var(--stone-300); grid-column: span 2;">
+        <div class="mono" style="color: var(--stone-500);">CAMPAÑA · FAMILIAS</div>
+        <h2 class="serif" style="font-size: clamp(42px, 5vw, 72px); font-weight: 400; line-height: 1; color: var(--sage-700); max-width: 12ch; letter-spacing: -0.02em;">Toda la <em style="color: var(--coral-500); font-style: italic; font-weight: 300;">familia</em>,<br/>misma silla.</h2>
+        <div style="display: flex; justify-content: space-between; align-items: flex-end;">
+          <p style="max-width: 28ch; font-size: 14px; color: var(--stone-700);">Desde los más peques hasta los abuelos. Plan familiar, revisiones coordinadas y precios claros.</p>
+          <span style="background: var(--coral-400); color: var(--cream); padding: 12px 22px; border-radius: 999px; font-weight: 600; font-size: 14px;">Pedir cita →</span>
+        </div>
+        <span class="caption light">HERO WEB · DENTIKOS.ES</span>
+      </div>
+
+      <!-- Pattern -->
+      <div class="pattern"></div>
+
+      <!-- Email block -->
+      <div class="app-card light" style="background: var(--bone); grid-column: span 2; padding: 32px;">
+        <div class="mono" style="color: var(--stone-500);">EMAIL · RECORDATORIO</div>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 32px; align-items: center; flex: 1;">
+          <div>
+            <div class="logo-mini" style="display: flex; align-items: center; gap: 8px; margin-bottom: 20px;">
+              <img src="assets/logo-tooth.png" alt="" style="height: 36px; width: auto;" />
+              <div class="serif" style="font-size: 22px; color: var(--sage-600); line-height: 1;">Dentikos</div>
+            </div>
+            <div class="serif" style="font-size: 30px; line-height: 1.1; font-weight: 400; color: var(--ink); letter-spacing: -0.01em;">Hola, Marta.<br/><em style="color: var(--coral-500); font-style: italic; font-weight: 300;">Tu revisión</em> es el jueves.</div>
+            <p style="margin-top: 18px; font-size: 14px; color: var(--stone-700);">Te esperamos a las 10:30. Si necesitas cambiarla, respóndenos este mismo mail — sin líos.</p>
+          </div>
+          <div style="background: var(--sage-400); padding: 28px; aspect-ratio: 1; display: flex; flex-direction: column; justify-content: space-between; color: var(--cream); border-radius: 2px;">
+            <div class="mono" style="color: var(--sage-100); font-size: 10px; letter-spacing: 0.22em;">PRÓXIMA CITA</div>
+            <div>
+              <div class="serif" style="font-size: 60px; font-weight: 300; line-height: 0.9;">14</div>
+              <div class="mono" style="color: var(--sage-100); margin-top: 6px;">MAY · 10:30</div>
+            </div>
+          </div>
+        </div>
+        <span class="caption light">EMAIL MARKETING</span>
+      </div>
+
+      <!-- Uniform / merch -->
+      <div class="app-card" style="background: var(--sage-700); color: var(--cream);">
+        <div class="mono" style="color: var(--sage-200);">UNIFORME · BATA</div>
+        <div style="flex:1; display: grid; place-items: center;">
+          <img src="assets/logo-tooth-cream.png" alt="" style="height: 120px; width: auto; opacity: 0.95;" />
+        </div>
+        <div class="serif" style="font-size: 22px; font-weight: 400;">Bordado sobre tela crema o salvia oscuro.</div>
+        <span class="caption">BORDADO · ISOTIPO</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer data-screen-label="09 Cierre">
+  <div class="wrap">
+    <h2>Esto es <em>Dentikos.</em><br/>Ahora, a sonreír.</h2>
+    <div class="meta">
+      Guía de Marca · v1.0<br/>
+      Dentikos · 2026<br/>
+      Consultas de marca · hola@dentikos.es
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
